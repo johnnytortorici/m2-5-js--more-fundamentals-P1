@@ -12,11 +12,32 @@
 // f(["foo", -1]) // ""
 
 function repeat(arr) {
-  // Your code here
+  // Define variables
+  const str = arr[0];
+  const repeat = arr[1];
+  // Check that parameters are valid
+  if (typeof str !== 'string' || typeof repeat !== 'number') {
+    return undefined; // App ends here
+  }
+  // Check if repeat if less than 1
+  if (repeat < 1) return ''; // App ends here
+
+  let newStr = '';
+  for (let i = 0; i < repeat; i++) {
+    newStr += str;
+  }
+  return newStr;
 }
 
 // We need 7 test cases.
 // Don't forget to test all of the question parameters
+expect(repeat(['abc', 4]), 'abcabcabcabc');
+expect(repeat(['bacon', 0]), '');
+expect(repeat(['eggs', -10]), '');
+expect(repeat([12345, 2]), undefined);
+expect(repeat(['12345', 2]), '1234512345');
+expect(repeat([3, 'reverse']), undefined);
+expect(repeat(['apple', '2']), undefined);
 
 /**
  * -------------------------------------------------------------------

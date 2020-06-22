@@ -10,11 +10,23 @@
 
 function sumDigits(input) {
   // Your code here
+  if (typeof input[0] === 'number' && typeof input[1] === 'number' && input.length === 2) {
+    return input[0] + input[1];
+  } else {
+    return undefined;
+  }
 }
 
 // Add 5 more test cases here! 7 total
 expect(sumDigits([2, 5]), 7);
 expect(sumDigits([-1, 0]), -1);
+expect(sumDigits([12.12, 87.88]), 100);
+expect(sumDigits([12, '88']), undefined);
+expect(sumDigits(['2', '2']), undefined);
+expect(sumDigits([1, null]), undefined);
+expect(sumDigits([1, 2, 3]), undefined);
+expect(sumDigits(['apple', 0]), undefined);
+
 
 /**
  * -------------------------------------------------------------------

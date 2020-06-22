@@ -8,6 +8,7 @@
 
 function firstLetter(str) {
   // Your code here
+  return str[0];
 }
 
 // Step 2

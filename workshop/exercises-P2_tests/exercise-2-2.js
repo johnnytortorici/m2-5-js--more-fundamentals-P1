@@ -9,6 +9,8 @@
 
 function lastCharacter(str) {
   // Your code here
+  let length = str.length;
+  return str[length-1];
 }
 
 // Step 2
@@ -16,6 +18,10 @@ function lastCharacter(str) {
 // conditions specified above (don't forget empty string and number!!)
 
 expect(lastCharacter('max'), 'x');
+expect(lastCharacter(1988), undefined);
+expect(lastCharacter('baconlover88'), '8');
+expect(lastCharacter('last '), ' ');
+expect(lastCharacter(''), undefined);
 
 // Add 4 more test cases here!
 // 🌠 NOTE 🌠
